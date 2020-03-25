@@ -1,0 +1,102 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  padding: 3rem 0 0 0;
+}
+
+header{
+  position: fixed;
+  top: 0;
+
+  background-color: white;
+}
+
+header #logo{
+  padding: .75rem;
+  width: calc(100% - 3rem);
+
+  display: block;
+  box-sizing: border-box;
+  float: left;
+
+  text-align: right;
+  text-transform: uppercase;
+}
+
+header #logo span:first-child{
+  display: block;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+header #logo span:last-child{
+  display: block;
+  font-size: .5rem;
+  line-height: .5rem;
+}
+
+header #menubutton{
+  margin: 0;
+  padding: .75rem;
+
+  display: block;
+  float: right;
+  vertical-align: middle;
+}
+
+header #menubutton img{
+  display: block;
+}
+
+nav{
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: right;
+
+  padding: .75rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+nav ul li{
+  margin: 0;
+  padding: .75rem 1.5rem;
+
+  display: block;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+section{
+  padding: 1.5rem;
+
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  section{
+    padding: 3rem;
+  }
+
+  section h2{
+    width: calc(50% - 1.5rem);
+    float: left;
+  }
+
+  section h3, section p, section ul{
+    width: 50%;
+    margin-left: 50%;
+  }
+}
