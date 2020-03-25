@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'web',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,11 +119,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'frontend', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'web', 'static')
 
 # Force HTTPS
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Contentful
+SPACE_ID = os.environ.get('CTF_SPACE_ID')
+ACCESS_TOKEN = os.environ.get('CTF_DELIVERY_KEY')
+ENVIRONMENT = os.environ.get('CTF_ENVIRONMENT')
 
 # Local settings
 try:
