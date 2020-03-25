@@ -19,5 +19,6 @@ from web import views
 
 urlpatterns = [
     path('', views.index),
+    path('<slug>', views.page),
     #path('admin/', admin.site.urls),
 ]

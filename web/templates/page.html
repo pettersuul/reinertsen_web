@@ -1,0 +1,23 @@
+{% load markdownify %}
+{% load static %}
+<header>
+  <nav>
+    <ul>
+      {% for page in nav.0.pages %}
+        <li><a href="/{{ page.slug }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1>{{ page.title }}</h1>
+  {{ page.content|markdownify|safe }}
+</section>
+
+{% for subpage in page.subpages %}
+<section>
+  <h2>{{ subpage.title }}</h2>
+  {{ subpage.content|markdownify|safe }}
+</section>
+{% endfor %}

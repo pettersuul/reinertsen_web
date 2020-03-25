@@ -1,3 +1,4 @@
+from django.http import Http404, HttpRequest
 from django.shortcuts import render
 from .models import client
 
@@ -18,3 +19,15 @@ def index(request):
         'page': client.entries({'content_type': 'page', 'fields.slug': 'index', 'locale': locale})[0],
         'nav': client.entries({'content_type': 'menu', 'locale': locale})
     })
+
+def page(request, slug):
+    try:
+        locale = checklocale(request.get_host()),
+        page = client.entries({
+            'content_type': 'page', 'fields.slug': slug, 'locale': locale})[0]
+        return render(request, 'page.html', {
+            'page': page,
+            'nav': client.entries({'content_type': 'menu', 'locale': 'nb-NO'})
+        })
+    except IndexError:
+        raise Http404()
