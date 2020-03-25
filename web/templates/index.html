@@ -1,14 +1,9 @@
-{% load markdownify %}
+{% extends "base.html" %}
+
 {% load static %}
-<header>
-  <nav>
-    <ul>
-      {% for page in nav.0.pages %}
-        <li><a href="/{{ page.slug }}">{{ page.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-</header>
+{% load markdownify %}
+
+{% block body %}
 
 <section>
   <h1>Reinertsen New Energy</h1>
@@ -18,3 +13,5 @@
 <section>
   {{ page.content|markdownify|safe }}
 </section>
+
+{% endblock %}

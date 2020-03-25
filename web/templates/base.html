@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static '/css/fonts.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static '/css/typo.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static '/javascripts/main.js' %}"></script>
+
+    {% block title %}
+    {% endblock %}
+  </head>
+
+  <body>
+    {% include 'components/header.html' %}
+
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>
