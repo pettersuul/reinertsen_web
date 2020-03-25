@@ -26,6 +26,7 @@ header #logo{
   float: left;
 
   text-align: right;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
