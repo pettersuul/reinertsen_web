@@ -128,3 +128,12 @@ section{
     margin-left: 50%;
   }
 }
+
+@media (min-width: 1440px){
+  header{
+    padding: 0 calc((100% - 1440px - 1.5rem + 6rem) / 2);
+  }
+  section{
+    padding: 3rem calc((100% - 1440px + 6rem) / 2);
+  }
+}
