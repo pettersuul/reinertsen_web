@@ -8,26 +8,48 @@ def checklocale(domain):
     eng = '.com'
     no  = '.no'
 
-    if domain.endswith(eng):
+    if domain.get_host().endswith(eng):
         return 'en-US'
     else:
         return 'nb-NO'
 
+def getnav(input):
+    output = client.entries({
+        'content_type': 'menu',
+        'locale': checklocale(input)
+        })
+    return output
+
+def getindex(input):
+    output = client.entries({
+        'content_type': 'page',
+        'fields.slug': 'index',
+        'locale': checklocale(input)
+        })[0]
+    return output
+
+def getpage(input, slug):
+    output = client.entries({
+        'content_type': 'page',
+        'fields.slug': slug,
+        'locale': checklocale(input)
+        })[0]
+    return output
+
 def index(request):
-    locale = checklocale(request.get_host()),
-    return render(request, 'index.html', {
-        'page': client.entries({'content_type': 'page', 'fields.slug': 'index', 'locale': locale})[0],
-        'nav': client.entries({'content_type': 'menu', 'locale': locale})
-    })
+    try:
+        return render(request, 'index.html', {
+            'page': getindex(request),
+            'nav': getnav(request)
+        })
+    except IndexError:
+        raise Http404()
 
 def page(request, slug):
     try:
-        locale = checklocale(request.get_host()),
-        page = client.entries({
-            'content_type': 'page', 'fields.slug': slug, 'locale': locale})[0]
         return render(request, 'page.html', {
-            'page': page,
-            'nav': client.entries({'content_type': 'menu', 'locale': 'nb-NO'})
+            'page': getpage(request, slug),
+            'nav': getnav(request)
         })
     except IndexError:
         raise Http404()
