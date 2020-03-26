@@ -95,7 +95,7 @@ section{
   overflow: hidden;
 }
 
-img[src*="inline"]{
+img{
   width:33%;
   margin: 0 0 1.5rem 1.5rem;
   float: right;
@@ -123,6 +123,10 @@ img[src*="inline"]{
   section h3, section p, section ul{
     width: 50%;
     margin-left: 50%;
+  }
+
+  img{
+    width:12.5%;
   }
 }
 
