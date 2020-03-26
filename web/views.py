@@ -36,6 +36,14 @@ def getpage(input, slug):
         })[0]
     return output
 
+def getreference(input, slug):
+    output = client.entries({
+        'content_type': 'reference',
+        'fields.slug': slug,
+        'locale': checklocale(input)
+        })[0]
+    return output
+
 def index(request):
     try:
         return render(request, 'index.html', {
@@ -49,6 +57,24 @@ def page(request, slug):
     try:
         return render(request, 'page.html', {
             'page': getpage(request, slug),
+            'nav': getnav(request)
+        })
+    except IndexError:
+        raise Http404()
+
+def references_list(request):
+    try:
+        return render(request, 'references.html', {
+            'page': getpage(request, 'references'),
+            'nav': getnav(request)
+        })
+    except IndexError:
+        raise Http404()
+
+def references_single(request, slug):
+    try:
+        return render(request, 'page.html', {
+            'page': getreference(request, slug),
             'nav': getnav(request)
         })
     except IndexError:
