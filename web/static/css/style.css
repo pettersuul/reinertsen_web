@@ -7,6 +7,15 @@ body{
   padding: 3rem 0 0 0;
 }
 
+body.front{
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url("/static/images/background@1x.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
 header{
   width: 100%;
   position: fixed;
@@ -95,6 +104,10 @@ section{
   overflow: hidden;
 }
 
+section.front < body{
+  background-color: red;
+}
+
 img{
   width:33%;
   margin: 0 0 1.5rem 1.5rem;
@@ -106,9 +119,18 @@ img{
     padding: 0 2.25rem;
   }
 
+  header.front{
+    display: none;
+  }
+
   nav ul li{
     padding: .75rem;
     float: left;
+  }
+
+  nav.front{
+    position: fixed;
+    bottom: 0;
   }
 
   section{

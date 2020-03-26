@@ -1,4 +1,4 @@
-<nav id="menu">
+<nav id="menu"{% if front %} class="front"{% endif %}>
   <ul>
     {% for page in nav.0.pages %}
       <li><a href="/{{ page.slug }}">{{ page.title }}</a></li>

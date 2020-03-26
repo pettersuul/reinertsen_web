@@ -17,7 +17,11 @@
     {% endblock %}
   </head>
 
+  {% if front %}
+  <body class="front">
+  {% else %}
   <body>
+  {% endif %}
     {% include 'components/header.html' %}
 
     {% block body %}
@@ -25,4 +29,5 @@
 
     {% include 'components/nav.html' %}
   </body>
+
 </html>

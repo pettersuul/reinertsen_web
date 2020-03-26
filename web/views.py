@@ -48,7 +48,8 @@ def index(request):
     try:
         return render(request, 'index.html', {
             'page': getindex(request),
-            'nav': getnav(request)
+            'nav': getnav(request),
+            'front': True
         })
     except IndexError:
         raise Http404()
