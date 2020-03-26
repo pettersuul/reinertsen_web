@@ -90,6 +90,12 @@ section{
   overflow: hidden;
 }
 
+img[src*="inline"]{
+  width:33%;
+  margin: 0 0 1.5rem 1.5rem;
+  float: right;
+}
+
 @media (min-width: 768px) {
   header{
     padding: 0 2.25rem;
