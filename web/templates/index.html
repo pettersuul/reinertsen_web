@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
-{% load markdownify %}
+{% load richtext %}
 
 {% block body %}
 
@@ -11,7 +11,7 @@
 </section>
 
 <section>
-  {{ page.content|markdownify|safe }}
+  {{ page.content|render|safe }}
 </section>
 
 {% endblock %}

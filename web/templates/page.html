@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
-{% load markdownify %}
+{% load richtext %}
 
 {% block body %}
 
@@ -10,13 +10,13 @@
 </section>
 
 <section>
-  {{ page.content|markdownify|safe }}
+  {{ page.content|render|safe }}
 </section>
 
 {% for subpage in page.subpages %}
 <section>
   <h2>{{ subpage.title }}</h2>
-  {{ subpage.content|markdownify|safe }}
+  {{ subpage.content|render|safe }}
 </section>
 {% endfor %}
 
