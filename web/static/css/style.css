@@ -28,18 +28,22 @@ header #logo{
   text-align: right;
   text-decoration: none;
   text-transform: uppercase;
+  color: #000;
+  font-family: 'DIN Next', sans-serif;
 }
 
 header #logo span:first-child{
   display: block;
   font-size: 1rem;
   line-height: 1rem;
+  font-weight: 700;
 }
 
 header #logo span:last-child{
   display: block;
   font-size: .5rem;
   line-height: .5rem;
+  font-weight: 500;
 }
 
 header #menubutton{
@@ -58,11 +62,12 @@ header #menubutton img{
 nav{
   font-size: 1.25rem;
   line-height: 1.5rem;
-  text-align: right;
 
   padding: .75rem 0;
   width: 100%;
   overflow: hidden;
+
+  background-color: #045;
 }
 
 nav ul{
@@ -97,22 +102,8 @@ img[src*="inline"]{
 }
 
 @media (min-width: 768px) {
-  header{
+  header, nav{
     padding: 0 2.25rem;
-  }
-
-  header #logo{
-    width: auto;
-    float: right;
-  }
-
-  header #menubutton{
-    display: none;
-  }
-
-  nav{
-    padding: 0;
-    width: auto;
   }
 
   nav ul li{
@@ -136,7 +127,7 @@ img[src*="inline"]{
 }
 
 @media (min-width: 1440px){
-  header{
+  header, nav{
     padding: 0 calc((100% - 1440px - 1.5rem + 6rem) / 2);
   }
   section{

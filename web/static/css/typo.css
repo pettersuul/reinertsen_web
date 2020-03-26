@@ -51,6 +51,7 @@ ul li{
   padding: 0;
 }
 
-nav{
+nav a{
   font-family: 'DIN Next', sans-serif;
+  color: #fff;
 }
