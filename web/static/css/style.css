@@ -1,169 +1,69 @@
-html, body{
-  padding: 0;
+html{
+  width: 100%;
   margin: 0;
+  padding: .75rem;
+
+  box-sizing: border-box;
 }
 
 body{
-  padding: 3rem 0 0 0;
-}
-
-body.front{
-  height: 100vh;
-  box-sizing: border-box;
-  background-image: url("/static/images/background@1x.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-}
-
-header{
-  width: 100%;
-  position: fixed;
-  top: 0;
-
-  box-sizing: border-box;
-
-  background-color: white;
-}
-
-header.front{
-  display: none;
-}
-
-header #logo{
-  padding: .75rem;
-  width: calc(100% - 3rem);
-
-  display: block;
-  box-sizing: border-box;
-  float: left;
-
-  text-align: right;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  font-family: 'DIN Next', sans-serif;
-}
-
-header #logo span:first-child{
-  display: block;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 700;
-}
-
-header #logo span:last-child{
-  display: block;
-  font-size: .5rem;
-  line-height: .5rem;
-  font-weight: 500;
-}
-
-header #menubutton{
-  margin: 0;
-  padding: .75rem;
-
-  display: block;
-  float: right;
-  vertical-align: middle;
-}
-
-header #menubutton img{
-  display: block;
-}
-
-nav{
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-
-  padding: .75rem 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-nav ul{
   margin: 0;
   padding: 0;
-
-  list-style: none;
-  overflow: hidden;
-}
-
-nav ul li{
-  margin: 0;
-  padding: .75rem 1.5rem;
-
-  display: block;
 }
 
 section{
-  padding: 1.5rem;
+  margin: .75rem;
+  padding: 1.5rem 0;
 
+  box-sizing: border-box;
+  position: relative;
   overflow: hidden;
 }
 
-section.front < body{
-  background-color: red;
-}
-
-img{
-  width:33%;
-  margin: 0 0 1.5rem 1.5rem;
+section img{
+  width: 12.5%;
   float: right;
+  margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
-@media (min-width: 768px) {
-  header, nav{
-    padding: 0 2.25rem;
+h1, h2{
+  width: 51%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  float: left;
+}
+
+h3, h4, h5, h6, p, ol, ul, blockquote{
+  width: 49%;
+  max-width: 640px;
+  margin-left: 51%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px){
+  h1, h2{
+    width: 100%;
+    padding: 0 .75rem;
+    float: none;
+    text-align: left;
   }
 
-  header #logo{
+  h3, h4, h5, h6, p, ol, ul, blockquote{
+    width: 100%;
+    margin-left: 0;
+    padding: 0 .75rem;
+  }
+
+  section img{
+    width: 25%;
     float: right;
-    width: auto;
-  }
-
-  header #menubutton{
-    display: none;
-  }
-
-  nav ul li{
-    padding: .75rem;
-    float: left;
-  }
-
-  nav{
-    position: fixed;
-    top: 0;
-    background-color: unset;
-    width: auto;
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  section{
-    padding: 3rem;
-  }
-
-  section h2{
-    width: calc(50% - 1.5rem);
-    float: left;
-  }
-
-  section h3, section p, section ul{
-    width: 50%;
-    margin-left: 50%;
-  }
-
-  img{
-    width:12.5%;
+    margin: 0 1.5rem 1.5rem 1.5rem;
   }
 }
 
-@media (min-width: 1440px){
-  header, nav{
-    padding: 0 calc((100% - 1440px - 1.5rem + 6rem) / 2);
-  }
-  section{
-    padding: 3rem calc((100% - 1440px + 6rem) / 2);
+@media (max-width: 480px){
+  html{
+    padding: 0;
   }
 }
