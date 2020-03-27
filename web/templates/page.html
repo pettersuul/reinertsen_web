@@ -16,6 +16,9 @@
 {% for subpage in page.subpages %}
 <section>
   <h2>{{ subpage.title }}</h2>
+  {% if subpage.image %}
+  <img class="image" src="{{ subpage.image.url }}" title="{{ subpage.image.title }}" alt="{{ subpage.image.description }}">
+  {% endif %}
   {{ subpage.content|render|safe }}
 </section>
 {% endfor %}

@@ -103,7 +103,12 @@ section img{
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
-h1, h2{
+.image{
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, .image{
   width: 51%;
   padding: 0 1.5rem;
   box-sizing: border-box;
@@ -194,7 +199,7 @@ section.front .logo span{
 
 @media (max-width: 640px){
 
-  h1, h2{
+  h1, h2, .image{
     width: 100%;
     padding: 0 .75rem;
     float: none;
