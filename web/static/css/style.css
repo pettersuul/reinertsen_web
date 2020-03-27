@@ -4,11 +4,86 @@ html{
   padding: .75rem;
 
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 body{
   margin: 0;
   padding: 0;
+}
+
+header{
+  margin: .75rem;
+  padding: 0 .75rem;
+
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 100;
+  background-color: #fff;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header #logo{
+  padding: .75rem;
+  float: right;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: 'DIN Next';
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header #logo span:first-child{
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+}
+
+header #logo span:last-child{
+  font-size: .5rem;
+  line-height: .5rem;
+  display: block;
+}
+
+header #menubutton{
+  padding: .75rem;
+  overflow: hidden;
+  float: right;
+  display: none;
+}
+
+header #menubutton svg{
+  display: block;
+}
+
+nav{
+  float: left;
+}
+
+nav ul{
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+nav ul li{
+  margin: 0;
+  float: left;
+}
+
+nav a{
+  padding: .75rem;
+  display: block;
+}
+
+nav a:hover{
+  background-color: rgba(0,0,0,.1);
 }
 
 section{
@@ -41,7 +116,31 @@ h3, h4, h5, h6, p, ol, ul, blockquote{
   box-sizing: border-box;
 }
 
+@media (max-width: 1024px){
+
+  header #menubutton{
+    display: block;
+  }
+
+  nav{
+    display: none;
+    float: none;
+  }
+
+  nav ul{
+    padding: 0;
+    width: 100%;
+  }
+
+  nav ul li{
+    float: none;
+  }
+}
+
 @media (max-width: 640px){
+  header{
+    padding: 0;
+  }
   h1, h2{
     width: 100%;
     padding: 0 .75rem;
