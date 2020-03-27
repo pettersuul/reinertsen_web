@@ -26,6 +26,10 @@ header{
   background-color: white;
 }
 
+header.front{
+  display: none;
+}
+
 header #logo{
   padding: .75rem;
   width: calc(100% - 3rem);
@@ -75,8 +79,6 @@ nav{
   padding: .75rem 0;
   width: 100%;
   overflow: hidden;
-
-  background-color: #045;
 }
 
 nav ul{
@@ -92,10 +94,6 @@ nav ul li{
   padding: .75rem 1.5rem;
 
   display: block;
-}
-
-nav a{
-  text-decoration: none;
 }
 
 section{
@@ -119,7 +117,12 @@ img{
     padding: 0 2.25rem;
   }
 
-  header.front{
+  header #logo{
+    float: right;
+    width: auto;
+  }
+
+  header #menubutton{
     display: none;
   }
 
@@ -128,9 +131,13 @@ img{
     float: left;
   }
 
-  nav.front{
+  nav{
     position: fixed;
-    bottom: 0;
+    top: 0;
+    background-color: unset;
+    width: auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   section{

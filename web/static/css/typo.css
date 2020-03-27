@@ -62,5 +62,10 @@ ul p{
 
 nav a{
   font-family: 'DIN Next', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+
+nav.front a{
   color: #fff;
 }
