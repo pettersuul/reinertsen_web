@@ -32,6 +32,11 @@ class ul_renderer(BaseNodeRenderer):
         s = ''.join(list)
         return s
 
+class blockqoute_renderer(BaseNodeRenderer):
+    def render(self, node):
+        content = node['content'][0]['content'][0]['value']
+        return '<blockquote>{0}</blockquote>'.format(content)
+
 class entrylink_renderer(BaseNodeRenderer):
     def render(self, node):
         target = str(node['data']['target'])
@@ -51,7 +56,8 @@ renderer = RichTextRenderer({
     'embedded-entry-block': entry_renderer,
     'entry-hyperlink': entrylink_renderer,
     'ordered-list': ol_renderer,
-    'unordered-list': ul_renderer
+    'unordered-list': ul_renderer,
+    'blockquote': blockqoute_renderer
 })
 
 @register.filter
