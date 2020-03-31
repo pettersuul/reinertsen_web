@@ -115,11 +115,19 @@ h1, h2, .image{
   float: left;
 }
 
-h3, h4, h5, h6, p, ol, ul, blockquote{
+h3, h4, h5, h6, p, blockquote{
   width: 49%;
   max-width: 640px;
   margin-left: 51%;
   padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+ol, ul{
+  width: 49%;
+  max-width: 640px;
+  margin-left: 51%;
+  padding: 0 1.5rem 0 3rem;
   box-sizing: border-box;
 }
 
@@ -135,16 +143,16 @@ body.front{
   color: #fff;
 }
 
+body.front a{
+  color: #fff;
+}
+
 header.front{
   background-color: rgba(255,255,255,0);
 }
 
 header.front #logo{
   display: none;
-}
-
-header.front a{
-  color: #fff;
 }
 
 section.front .logo{

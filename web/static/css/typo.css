@@ -12,7 +12,6 @@ h1{
   line-height: 3rem;
   font-family: 'DIN Next', sans-serif;
   text-transform: uppercase;
-  text-align: right;
 }
 
 h2{
@@ -20,7 +19,6 @@ h2{
   line-height: 2rem;
   font-family: 'DIN Next', sans-serif;
   text-transform: uppercase;
-  text-align: right;
 }
 
 h3{
@@ -66,7 +64,6 @@ a:hover{
 
 ul, ol{
   margin: 0 0 1.5rem 0;
-  padding: 0 0 0 1.15rem;
   box-sizing: border-box;
 }
 
@@ -101,13 +98,15 @@ nav ul li a{
 }
 
 section.front .logo span:first-child{
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 5rem;
+  line-height: 5rem;
+  text-align: right;
 }
 
 section.front .logo span:last-child{
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: right;
 }
 
 
