@@ -96,6 +96,11 @@ section{
   overflow: hidden;
 }
 
+section.title{
+  margin: 0 0 -3rem 0;
+  padding: 6rem 1.5rem 0 1.5rem;
+}
+
 section.cyan{
   background-color: #07c;
   color: #fff;
@@ -215,6 +220,11 @@ section.front .logo span{
 
   section{
     padding: 1.5rem 0;
+  }
+
+  section.title{
+    margin: 0 0 -1.5rem 0;
+    padding: 6rem 0 0 0;
   }
 
 }
