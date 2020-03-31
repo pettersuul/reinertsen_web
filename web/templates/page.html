@@ -10,6 +10,9 @@
 </section>
 
 <section>
+  {% if page.image %}
+  <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
+  {% endif %}
   {{ page.content|render|safe }}
 </section>
 
