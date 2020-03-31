@@ -89,7 +89,7 @@ nav a:hover{
 
 section{
   margin: 0;
-  padding: 1.5rem 0;
+  padding: 3rem 1.5rem;
 
   box-sizing: border-box;
   position: relative;
@@ -212,6 +212,11 @@ section.front .logo span{
   #menucontroller:checked ~ nav{
     display: block;
   }
+
+  section{
+    padding: 1.5rem 0;
+  }
+
 }
 
 @media (max-width: 640px){
