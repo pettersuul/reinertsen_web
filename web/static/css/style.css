@@ -97,6 +97,16 @@ section{
   overflow: hidden;
 }
 
+section.cyan{
+  background-color: #07c;
+  color: #fff;
+}
+
+section.blue{
+  background-color: #045;
+  color: #fff;
+}
+
 section img{
   width: 12.5%;
   float: right;
