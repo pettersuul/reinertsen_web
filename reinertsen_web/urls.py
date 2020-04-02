@@ -22,6 +22,8 @@ urlpatterns = [
     path('references/<slug>', views.references_single),
     path('references', views.references_list),
     path('contact', views.contact),
+    path('job-opportunities/<slug>', views.listing_single),
+    path('job-opportunities', views.listing_list),
     path('<slug>', views.page),
     #path('admin/', admin.site.urls),
 ]

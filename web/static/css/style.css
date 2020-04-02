@@ -145,6 +145,18 @@ h1, .text h2, .text .image{
   box-sizing: border-box;
 }
 
+.text.col{
+  width: 50%;
+  float: left;
+}
+
+.col h3, .col h4, .col h5, .col h6, .col p, .col blockquote{
+  width: 100%;
+  margin-left: 0;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
 body.front{
   min-height: calc(100vh - 3rem);
   margin: .75rem;
@@ -270,6 +282,10 @@ section.person h3, section.person p{
     width: 100%;
     margin-left: 0;
     padding: 0 .75rem;
+  }
+
+  .text.col{
+    width: 100%;
   }
 
   section img{

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load richtext %}
+
+{% block body %}
+
+<section class="title">
+  <h1 class="lowercase">{{ page.title }}</h1>
+</section>
+
+<section class="text">
+  {{ page.content|render|safe }}
+</section>
+
+{% endblock %}
