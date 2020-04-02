@@ -278,10 +278,16 @@ section.person h3, section.person p{
     padding: 0 .75rem;
   }
 
-  .text h3, .text h4, .text h5, .text h6, .text p, .text ol, .text ul, .text blockquote{
+  .text h3, .text h4, .text h5, .text h6, .text p, .text blockquote{
     width: 100%;
     margin-left: 0;
     padding: 0 .75rem;
+  }
+
+  .text ol, .text ul{
+    width: 100%;
+    margin-left: 0%;
+    padding: 0 .75rem 0 2rem;
   }
 
   .text.col{
