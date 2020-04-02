@@ -17,7 +17,7 @@
 </section>
 
 {% for subpage in page.subpages %}
-<section class="{% cycle 'cyan' 'blue' 'white' %} text">
+<section class="{% cycle 'blue' 'white' %} text">
   <h2>{{ subpage.title }}</h2>
   {% if subpage.image %}
   <img class="image" src="{{ subpage.image.url }}" title="{{ subpage.image.title }}" alt="{{ subpage.image.description }}">
