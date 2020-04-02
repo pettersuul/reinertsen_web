@@ -21,6 +21,7 @@ urlpatterns = [
     path('', views.index),
     path('references/<slug>', views.references_single),
     path('references', views.references_list),
+    path('contact', views.contact),
     path('<slug>', views.page),
     #path('admin/', admin.site.urls),
 ]

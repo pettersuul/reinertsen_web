@@ -122,14 +122,14 @@ section img{
   padding: 0;
 }
 
-h1, h2, .image{
+h1, .text h2, .text .image{
   width: 51%;
   padding: 0 1.5rem;
   box-sizing: border-box;
   float: left;
 }
 
-h3, h4, h5, h6, p, blockquote{
+.text h3, .text h4, .text h5, .text h6, .text p, .text blockquote{
   width: 49%;
   max-width: 640px;
   margin-left: 51%;
@@ -137,7 +137,7 @@ h3, h4, h5, h6, p, blockquote{
   box-sizing: border-box;
 }
 
-ol, ul{
+.text ol, .text ul{
   width: 49%;
   max-width: 640px;
   margin-left: 51%;
@@ -179,6 +179,25 @@ section.front .logo span{
   padding: 0 1.5rem;
   display: block;
   box-sizing: border-box;
+}
+
+section.person{
+  width: 49%;
+  max-width: 640px;
+  margin-left: 51%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+section.person img{
+  width: auto;
+  height: 7.5rem;
+  margin-right: 1.5rem;
+  float: left;
+}
+
+section.person h3, section.person p{
+  width: 100%;
 }
 
 @media (max-width: 1024px){
@@ -227,11 +246,15 @@ section.front .logo span{
     padding: 6rem 0 0 0;
   }
 
+  section.person{
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 640px){
 
-  h1, h2, .image{
+  h1, .text h2, .text .image{
     width: 100%;
     padding: 0 .75rem;
     float: none;
@@ -243,7 +266,7 @@ section.front .logo span{
     padding: 0 .75rem;
   }
 
-  h3, h4, h5, h6, p, ol, ul, blockquote{
+  .text h3, .text h4, .text h5, .text h6, .text p, .text ol, .text ul, .text blockquote{
     width: 100%;
     margin-left: 0;
     padding: 0 .75rem;
@@ -253,6 +276,10 @@ section.front .logo span{
     width: 25%;
     float: right;
     margin: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  section.person{
+    padding: .75rem;
   }
 }
 

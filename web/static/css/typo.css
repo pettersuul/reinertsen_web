@@ -14,6 +14,10 @@ h1{
   text-transform: uppercase;
 }
 
+h1.lowercase{
+  text-transform: none;
+}
+
 h2{
   font-size: 2rem;
   line-height: 2rem;
