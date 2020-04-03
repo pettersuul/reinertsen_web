@@ -9,26 +9,30 @@
 
 {% block body %}
 
-<section class="title">
-  <h1>{{ page.title }}</h1>
-</section>
+<section class="page content white">
 
-<section class="text">
-  {% if page.image %}
-  <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
-  {% endif %}
-  {{ page.content|render|safe }}
-</section>
+  <div class="col left">
+    <h1>{{ page.title }}</h1>
 
-{% for person in page.subpages %}
-<section class="person">
-  <img class="image" src="{{ person.image.url }}" title="{{ person.image.title }}" alt="{{ person.image.description }}">
-  <h3>{{ person.title }}</h3>
-  <p>
-    {{ person.phone }}<br>
-    <a href="mailto:{{ person.email }}">{{ person.email }}</a>
-  </p>
+    {% for person in page.subpages %}
+    <div class="person">
+      <img class="person-image" src="{{ person.image.url }}" title="{{ person.image.title }}" alt="{{ person.image.description }}">
+      <h3>{{ person.title }}</h3>
+      <p>
+        {{ person.phone }}<br>
+        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="col right">
+    {% if page.image %}
+    <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
+    {% endif %}
+    {{ page.content|render|safe }}
+  </div>
+
 </section>
-{% endfor %}
 
 {% endblock %}

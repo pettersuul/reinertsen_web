@@ -9,25 +9,24 @@
 
 {% block body %}
 
-<section class="title">
-  <h1>{{ page.title }}</h1>
-</section>
+<section class="page content white">
 
-<section class="text">
-  {% if page.image %}
-  <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
-  {% endif %}
-  {{ page.content|render|safe }}
+  <div class="col left">
+    <h1>{{ page.title }}</h1>
+    {% if page.image %}
+    <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
+    {% endif %}
+  </div>
+
+  <div class="col right">
+    {{ page.content|render|safe }}
+  </div>
+
 </section>
 
 {% for subpage in page.subpages %}
-<section class="{% cycle 'blue' 'white' %} text">
-  <h2>{{ subpage.title }}</h2>
-  {% if subpage.image %}
-  <img class="image" src="{{ subpage.image.url }}" title="{{ subpage.image.title }}" alt="{{ subpage.image.description }}">
-  {% endif %}
-  {{ subpage.content|render|safe }}
-</section>
+  {% cycle 'blue' 'white' as color silent %}
+  {% include 'components/subpage.html' with subpage=subpage color=color  %}
 {% endfor %}
 
 {% endblock %}

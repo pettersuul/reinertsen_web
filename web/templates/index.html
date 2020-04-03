@@ -9,12 +9,19 @@
 
 {% block body %}
 
-<section class="front text">
-  <h1 class="logo">
-    <span>Reinertsen</span>
-    <span>New Energy</span>
-  </h1>
-  {{ page.content|render|safe }}
+<section class="page content blue front">
+
+  <div class="col left">
+    <h1 class="logo">
+      <span>Reinertsen</span>
+      <span>New Energy</span>
+    </h1>
+  </div>
+
+  <div class="col right">
+    {{ page.content|render|safe }}
+  </div>
+
 </section>
 
 {% endblock %}

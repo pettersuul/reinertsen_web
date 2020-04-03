@@ -1,0 +1,217 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+header{
+  width: 100%;
+  margin: 0;
+  padding: 0 1.5rem;
+
+  position: fixed;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  &.blue{
+    background-color: unset;
+  }
+
+  #menucontroller{
+    display: none;
+  }
+
+  #menubutton{
+    display: none;
+  }
+
+  #logo{
+    padding: .75rem;
+
+    float: right;
+
+    & span{
+      display: block;
+    }
+  }
+}
+
+nav{
+  margin-top: 1.5rem;
+  float: left;
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  li{
+    margin: 0;
+    padding: 0;
+
+    float: left;
+  }
+
+  a{
+    padding: .75rem;
+    display: block;
+  }
+}
+
+section{
+  box-sizing: border-box;
+}
+
+section.content{
+  padding: 6rem 3rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .col{
+    box-sizing: border-box;
+  }
+
+  .left{
+    max-width: 480px;
+    width: 320px;
+    margin-right: 3rem;
+
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    .image{
+      width: 100%;
+      margin: 0 0 1.5rem 0;
+      display: block;
+    }
+  }
+
+  .right{
+    max-width: 640px;
+    flex-grow: 1;
+
+    img{
+      width: auto;
+      height: 12rem;
+      margin: 0 0 1.5rem 1.5rem;
+      display: block;
+      float: right;
+
+      &.image{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+section.page{
+  padding-top: 15rem !important;
+}
+
+section.subpage{
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+section.front{
+  height: 100vh;
+  background-image: url('/static/images/background@1x.jpg');
+  background-size: cover;
+  background-position: center;
+
+  & span{
+    display: block;
+  }
+}
+
+.person{
+  margin: 0 0 1.5rem 0;
+  overflow: hidden;
+
+  & .person-image{
+    width: auto !important;
+    height: 8rem;
+    margin: 0 1.5rem 0 0;
+    float: left;
+  }
+}
+
+.white{
+  background-color: #fff;
+}
+
+.cyan{
+  background-color: #07c;
+}
+
+.blue{
+  background-color: #045;
+}
+
+@media (max-width: 1023px){
+  header #menubutton{
+    padding: .75rem;
+
+    font-size: 1.5rem;
+    display: block;
+    float: right;
+  }
+
+  #menucontroller:checked ~ nav{
+    display: block;
+  }
+
+  nav{
+    width: 100%;
+    display: none;
+    background-color: #fff;
+
+    &.front{
+      background-color: #045;
+    }
+
+    li{
+      float: none;
+      padding: .5rem 1.5rem;
+    }
+  }
+
+  section.content{
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 767px){
+
+  section.content{
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .left{
+      width: 100%;
+      min-width: 100%;
+      margin: 0 0 3rem 0;
+    }
+  }
+
+  section.page{
+    padding-top: 6rem !important;
+  }
+}
+
+@media (max-width: 559px){
+
+  header{
+    padding: 0;
+  }
+
+  section.content{
+    padding: .75rem;
+  }
+}

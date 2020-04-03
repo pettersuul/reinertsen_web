@@ -89,7 +89,7 @@ def references_list(request):
 
 def references_single(request, slug):
     try:
-        return render(request, 'reference_single.html', {
+        return render(request, 'page.html', {
             'page': getreference(request, slug),
             'nav': getnav(request)
         })
@@ -107,7 +107,7 @@ def listing_list(request):
 
 def listing_single(request, slug):
     try:
-        return render(request, 'listing_single.html', {
+        return render(request, 'page.html', {
             'page': getlisting(request, slug),
             'nav': getnav(request)
         })

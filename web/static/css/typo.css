@@ -1,133 +1,128 @@
-body{
+html {
   font-family: 'Noto Sans', sans-serif;
-}
+  hyphens: auto; }
 
-h1, h2, h3, h4, h5, h6{
+h1 {
+  font-family: 'DIN Next';
   font-weight: 700;
+  margin: 0 0 3rem 0; }
+
+h2, h3, h4 {
+  font-family: 'DIN Next';
+  font-weight: 700;
+  margin: 0 0 1.5rem 0; }
+
+h5, h6 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0; }
+
+p {
+  margin: 0 0 1.5rem 0; }
+
+ol, ul {
   margin: 0 0 1.5rem 0;
-}
+  padding: 0 0 0 1.5rem; }
 
-h1{
-  font-size: 3rem;
-  line-height: 3rem;
-  font-family: 'DIN Next', sans-serif;
-  text-transform: uppercase;
-}
+li {
+  margin: 0 0 .75rem 0; }
 
-h1.lowercase{
-  text-transform: none;
-}
-
-h2{
-  font-size: 2rem;
-  line-height: 2rem;
-  font-family: 'DIN Next', sans-serif;
-  text-transform: uppercase;
-}
-
-h3{
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  font-family: 'DIN Next', sans-serif;
-}
-
-h4{
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  font-family: 'DIN Next', sans-serif;
-}
-
-h5{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-h6{
-  font-size: .75rem;
-  line-height: 1rem;
-  font-family: 'DIN Next', sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-p{
-  font-size: 1rem;
-  line-height: 1.5rem;
-
-  margin: 0 0 1.5rem 0;
-}
-
-a{
-  color: #045;
-  text-decoration: underline;
-}
-
-a:hover{
-  color: #000;
-}
-
-ul, ol{
-  margin: 0 0 1.5rem 0;
-  box-sizing: border-box;
-}
-
-li{
-  font-size: 1rem;
-  line-height: 1.5rem;
-
-  margin: 0 0 .75rem 0;
-  padding: 0;
-}
-
-blockquote{
-  font-size: 1.5rem;
-  line-height: 2rem;
-
+blockquote {
   margin: 0 0 1.5rem 0;
   padding: 0 0 0 1rem;
-  border-left: .5rem #045 solid;
-}
+  border-left: #045 .5rem solid; }
 
-hr{
-  margin: 3rem;
-  border: 1px solid #000;
-}
+a:hover {
+  text-decoration: none; }
 
-nav ul li a{
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: 'DIN Next', sans-serif;
-  font-weight: 400;
+header #logo, section.front .logo {
+  font-family: 'DIN Next';
+  font-weight: 700;
   text-decoration: none;
-}
+  text-transform: uppercase;
+  text-align: right; }
 
-section.front .logo span:first-child{
-  font-size: 5rem;
-  line-height: 5rem;
-  text-align: right;
-}
+nav a {
+  text-decoration: none; }
 
-section.front .logo span:last-child{
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  text-align: right;
-}
+html {
+  font-size: 16px;
+  line-height: 1.5rem; }
 
+h1 {
+  font-size: 3rem;
+  line-height: 3rem; }
 
-@media (max-width: 1024px){
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.25rem; }
 
-  nav ul li a{
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.75rem; }
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.5rem; }
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+li {
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+blockquote {
+  font-size: 1.5rem;
+  line-height: 2rem; }
+
+header #logo span:first-child {
+  font-size: 2rem;
+  line-height: 2rem; }
+header #logo span:last-child {
+  font-size: 1rem;
+  line-height: 1rem; }
+
+section.front .logo span:first-child {
+  font-size: 3rem;
+  line-height: 3rem; }
+section.front .logo span:last-child {
+  font-size: 1.5rem;
+  line-height: 1.5rem; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  color: #000; }
+
+a {
+  color: #045; }
+  a:hover {
+    color: #000; }
+
+.blue h1, .blue h2, .blue h3, .blue h4, .blue h5, .blue h6, .blue p, .blue ul, .blue ol, .blue #menubutton {
+  color: #fff; }
+.blue a {
+  color: #fff; }
+  .blue a:hover {
+    opacity: .75; }
+.blue blockquote {
+  color: #fff;
+  border-left: rgba(255, 255, 255, 0.75) 0.5rem solid; }
+
+@media (max-width: 1023px) {
+  header #logo span:first-child {
+    font-size: 1rem;
+    line-height: 1rem; }
+  header #logo span:last-child {
+    font-size: .5rem;
+    line-height: .5rem; }
+
+  nav li {
     font-size: 1.5rem;
-    line-height: 2rem;
-  }
+    line-height: 2rem; } }
 
-  section.front .logo span:first-child{
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-  }
-
-  section.front .logo span:last-child{
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-  }
-}
+/*# sourceMappingURL=typo.css.map */

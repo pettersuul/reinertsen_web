@@ -1,0 +1,15 @@
+{% load richtext %}
+
+<section class="{{ color }} subpage content">
+
+  <div class="col left">
+    <h2>{{ subpage.title }}</h2>
+    {% if subpage.image %}
+    <img class="image" src="{{ subpage.image.url }}" title="{{ subpage.image.title }}" alt="{{ subpage.image.description }}">
+    {% endif %}
+  </div>
+
+  <div class="col right">
+    {{ subpage.content|render|safe }}
+  </div>
+</section>
