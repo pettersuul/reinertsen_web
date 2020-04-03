@@ -14,20 +14,10 @@
 </section>
 
 <section class="text">
-  {{ page.content|render|safe }}
   {% if page.image %}
   <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
   {% endif %}
+  {{ page.content|render|safe }}
 </section>
-
-{% for subpage in page.subpages %}
-<section class="{% cycle 'cyan' 'blue' 'white' %} text">
-  <h2>{{ subpage.title }}</h2>
-  {% if subpage.image %}
-  <img class="image" src="{{ subpage.image.url }}" title="{{ subpage.image.title }}" alt="{{ subpage.image.description }}">
-  {% endif %}
-  {{ subpage.content|render|safe }}
-</section>
-{% endfor %}
 
 {% endblock %}
