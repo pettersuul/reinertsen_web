@@ -32,6 +32,9 @@ blockquote {
   padding: 0 0 0 1rem;
   border-left: #045 .5rem solid; }
 
+a {
+  word-break: break-all; }
+
 a:hover {
   text-decoration: none; }
 
