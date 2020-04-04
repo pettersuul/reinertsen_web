@@ -194,6 +194,12 @@ Temporary Items
 
 # Pyre type checker
 
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 ### VirtualEnv ###
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
