@@ -7,7 +7,7 @@ html, body{
 header{
   width: 100%;
   margin: 0;
-  padding: 0 1.5rem;
+  padding: 0;
 
   position: fixed;
   overflow: hidden;
@@ -167,8 +167,14 @@ section.front{
     display: block;
   }
 
+  .front header #logo{
+    display: none;
+  }
+
   nav{
     width: 100%;
+    margin: 0;
+    padding: 0 2.25rem 2.25rem;
     display: none;
     background-color: #fff;
 
@@ -178,7 +184,11 @@ section.front{
 
     li{
       float: none;
-      padding: .5rem 1.5rem;
+      padding: 0;
+    }
+
+    & a:hover{
+      background-color: rgba(0,0,0,.1);
     }
   }
 
@@ -208,6 +218,10 @@ section.front{
 @media (max-width: 559px){
 
   header{
+    padding: 0;
+  }
+
+  nav{
     padding: 0;
   }
 

@@ -63,6 +63,7 @@ header #logo, section.front .logo{
 
 nav a{
   text-decoration: none;
+  letter-spacing: -.1px;
 }
 
 // TEXT SIZES
@@ -187,14 +188,6 @@ a{
     & span:last-child{
       font-size: .5rem;
       line-height: .5rem;
-    }
-  }
-
-  nav{
-
-    li{
-      font-size: 1.5rem;
-      line-height: 2rem;
     }
   }
 }
