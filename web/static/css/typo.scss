@@ -61,6 +61,11 @@ header #logo, section.front .logo{
   text-align: right;
 }
 
+section.front .col.left a{
+  text-align: right;
+  display: block;
+}
+
 nav a{
   text-decoration: none;
   letter-spacing: -.1px;

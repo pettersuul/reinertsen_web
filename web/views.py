@@ -64,6 +64,7 @@ def index(request):
         return render(request, 'index.html', {
             'page': getindex(request),
             'nav': getnav(request),
+            'locale': checklocale(request),
             'front': True
         })
     except IndexError:

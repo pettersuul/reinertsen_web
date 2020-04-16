@@ -86,6 +86,8 @@ section.front {
   background-position: center; }
   section.front span {
     display: block; }
+  section.front .logo {
+    margin: 0 0 2.25rem 0; }
 
 .person {
   margin: 0 0 1.5rem 0;
