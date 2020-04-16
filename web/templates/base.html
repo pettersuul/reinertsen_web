@@ -11,7 +11,7 @@
     <link href="{% static '/css/fonts.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static '/css/typo.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css" />
-    <script src="{% static '/javascripts/main.js' %}"></script>
+    <link href="{% static '/css/lightbox.min.css' %}" rel="stylesheet" />
 
     {% block title %}
     {% endblock %}
@@ -26,6 +26,9 @@
 
     {% block body %}
     {% endblock %}
+
+  <script src="{% static '/js/lightbox-jquery.min.js' %}"></script>
+
   </body>
 
 </html>
