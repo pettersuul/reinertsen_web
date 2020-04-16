@@ -1,3 +1,4 @@
 django
 contentful
 rich_text_renderer
+whitenoise
