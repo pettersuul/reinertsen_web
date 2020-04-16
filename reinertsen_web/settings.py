@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'web',
-    'markdownify',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,31 +129,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SPACE_ID = os.environ.get('CTF_SPACE_ID')
 ACCESS_TOKEN = os.environ.get('CTF_DELIVERY_KEY')
 ENVIRONMENT = os.environ.get('CTF_ENVIRONMENT')
-
-# Markdownify
-MARKDOWNIFY_WHITELIST_TAGS = [
-    'a',
-    'abbr',
-    'acronym',
-    'b',
-    'blockquote',
-    'em',
-    'i',
-    'li',
-    'ol',
-    'p',
-    'strong',
-    'ul',
-    'img'
-]
-
-MARKDOWNIFY_WHITELIST_ATTRS = [
-    'src',
-    'alt'
-]
-
-for i in range(1, 6):
-    MARKDOWNIFY_WHITELIST_TAGS.append('h{0}'.format(i))
 
 # Local settings
 try:

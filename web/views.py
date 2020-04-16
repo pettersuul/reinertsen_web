@@ -2,7 +2,7 @@ from django.http import Http404, HttpRequest
 from django.shortcuts import render
 from .models import client
 
-# Create your views here.
+# FUNCTIONS
 
 def checklocale(domain):
     eng = '.com'
@@ -52,12 +52,7 @@ def getlisting(input, slug):
         })[0]
     return output
 
-def getpersons():
-    output = client.entries({
-        'content_type': 'person',
-        'locale': 'nb-NO'
-        })
-    return output
+# VIEWS
 
 def index(request):
     try:

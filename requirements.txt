@@ -1,4 +1,3 @@
 django
 contentful
-django-markdownify
 rich_text_renderer
