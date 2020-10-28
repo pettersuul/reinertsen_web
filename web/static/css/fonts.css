@@ -1,0 +1,38 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3965891, 2020-10-28T04:57:26-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: DINNextLTPro-Medium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/din-next/pro-medium/
+ *
+ * Webfont: DINNextLTPro-Light by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/din-next/pro-light/
+ *
+ *
+ * Webfonts copyright: Copyright &amp;#x00A9; 2008 - 2009 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH.
+ *
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3c83c3");
+
+@font-face {
+  font-family: 'DIN Next';
+  font-weight: 200;
+  src: url('webFonts/DINNextLTPro-Light/font.woff2') format('woff2'),
+    url('webFonts/DINNextLTPro-Light/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'DIN Next';
+  font-weight: 500;
+  src: url('webFonts/DINNextLTPro-Medium/font.woff2') format('woff2'),
+    url('webFonts/DINNextLTPro-Medium/font.woff') format('woff');
+}
