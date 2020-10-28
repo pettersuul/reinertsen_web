@@ -4,31 +4,102 @@
 {% load richtext %}
 
 {% block title %}
-  <title>Reinertsen New Energy - {{ page.title }}</title>
+  <title>Reinertsen New Energy</title>
 {% endblock %}
 
 {% block body %}
 
-<section class="page content white">
+{% include 'components/header.html' %}
 
-  <div class="col left">
-    <h1>{{ page.title }}</h1>
-    {% if page.image %}
-    <a href="{{ page.image.url }}" data-lightbox="{{ page.image.title }}">
-      <img class="image" src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.description }}">
-    </a>
-    {% endif %}
-  </div>
+{% if page.content %}
 
-  <div class="col right">
-    {{ page.content|render|safe }}
-  </div>
+  {% if page.featured and page.subpages %}
 
-</section>
+    <article class="main textbox medium">
+      {% if page.lead %}
+      <p class="large">{{ page.lead }}</p>
+      {% endif %}
+      {{ page.content|render|safe }}
+    </article>
+    <aside class="featured">
+      {% for item in page.featured %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+    <aside class="links">
+      {% for item in page.subpages %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
 
-{% for subpage in page.subpages %}
-  {% cycle 'blue' 'white' as color silent %}
-  {% include 'components/subpage.html' with subpage=subpage color=color  %}
-{% endfor %}
+  {% elif page.featured %}
+
+    <article class="main textbox medium">
+      {% if page.lead %}
+      <p class="large">{{ page.lead }}</p>
+      {% endif %}
+      {{ page.content|render|safe }}
+    </article>
+    <aside class="featured">
+      {% for item in page.featured %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+
+  {% elif page.subpages %}
+
+    <article class="main textbox large">
+      {% if page.lead %}
+      <p class="large">{{ page.lead }}</p>
+      {% endif %}
+      {{ page.content|render|safe }}
+    </article>
+    <aside class="links small">
+      {% for item in page.subpages %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+
+  {% else %}
+
+    <article class="main textbox full">
+      {% if page.lead %}
+      <p class="large">{{ page.lead }}</p>
+      {% endif %}
+      {{ page.content|render|safe }}
+    </article>
+
+  {% endif %}
+
+{% elif page.featured and page.subpages %}
+
+    <aside class="featured">
+      {% for item in page.featured %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+    <aside class="links">
+      {% for item in page.subpages %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+
+{% elif page.featured %}
+
+    <aside class="featured">
+      {% for item in page.featured %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+
+{% elif page.subpages %}
+
+  <aside class="links">
+    {% for subpage in page.subpages %}
+      {% include 'components/textbox.html' with content=subpage %}
+    {% endfor %}
+  </aside>
+
+{% endif %}
 
 {% endblock %}

@@ -1,0 +1,28 @@
+<header class="front">
+  <div class="header-text">
+
+    <div class="breadcrumb heading-overline">
+{% if locale == 'nb-NO' %}
+        <a href="https://rein-energy.com">View page in english</a>
+{% else %}
+        <a href="https://rein-energy.no">Vis siden på norsk</a>
+{% endif %}
+    </div>
+
+    <h1><span>Reinertsen</span><span>New Energy</span></h1>
+
+    <p class="large">
+      {{ page.lead }}
+    </p>
+
+  </div>
+
+  <div class="header-more">
+    {% if locale == 'nb-NO' %}
+    <a href="/om-oss" class="button cyan">Les mer om vår ambisjon</a>
+    {% else %}
+    <a href="/about" class="button cyan">Read more about our ambition</a>
+    {% endif %}
+  </div>
+
+</header>

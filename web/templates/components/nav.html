@@ -1,7 +1,11 @@
-<nav id="menu"{% if front %} class="front"{% endif %}>
+{% load static %}
+<nav>
   <ul>
+    <li id="menubutton"><label class="button" for="menucontroller">☰</label></li>
+    <li id="logo"><a class="button" href="/"><img src="{% static '/images/logo-white.svg' %}"></a></li>
+    <input type="checkbox" id="menucontroller">
     {% for page in nav.0.pages %}
-      <li><a href="/{{ page.slug }}">{{ page.title }}</a></li>
+      <li class="menuitem"><a class="button" href="/{{ page.slug }}">{{ page.title }}</a></li>
     {% endfor %}
   </ul>
 </nav>

@@ -9,25 +9,16 @@
 
 {% block body %}
 
-<section class="page content blue front">
+{% if front %}
+  {% include 'components/header-front.html' %}
+{% else %}
+  {% include 'components/header.html' %}
+{% endif %}
 
-  <div class="col left">
-    <h1 class="logo">
-      <span>Reinertsen</span>
-      <span>New Energy</span>
-    </h1>
-
-    {% if locale == 'nb-NO' %}
-    <a href="https://rein-energy.com">View page in english</a>
-    {% else %}
-    <a href="https://rein-energy.no">Vis siden på norsk</a>
-    {% endif %}
-  </div>
-
-  <div class="col right">
-    {{ page.content|render|safe }}
-  </div>
-
-</section>
+<aside class="links">
+  {% for subpage in page.subpages %}
+    {% include 'components/textbox-news.html' with content=subpage %}
+  {% endfor %}
+</aside>
 
 {% endblock %}

@@ -1,0 +1,7 @@
+{% if content.feature_image %}
+<a class="textbox featured" href="{{ page.slug }}/{{ content.slug }}" style="background-image: url({{ content.feature_image.url }})">
+{% else %}
+<a class="textbox" href="{{ page.slug }}/{{ content.slug }}">
+{% endif %}
+  <h4>{{ content.title }}</h4>
+</a>

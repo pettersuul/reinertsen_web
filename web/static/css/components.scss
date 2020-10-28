@@ -1,0 +1,437 @@
+$color-blue-400: #336977;
+$color-blue-500: #045;
+$color-cyan-400: #3392D6;
+$color-cyan-500: #07c;
+$color-background-0: #f5f5f5;
+$color-background-1: #fff;
+$color-text-white: #fff;
+$color-text-black: #000;
+
+html{
+  background-color: $color-background-0;
+}
+
+nav{
+  background-color: $color-blue-500;
+  padding: 0 2.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  #menucontroller:checked ~ .menuitem{
+    display: block;
+  }
+  #menucontroller{
+    display: none;
+  }
+  #menubutton{
+    display: none;
+    text-align: right;
+    float: right;
+    label{
+      display: block;
+      margin: 0;
+      color: $color-text-white;
+    }
+  }
+  #logo{
+    display: block;
+    img{
+      height: 1.25rem;
+    }
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  li{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+  }
+  img{
+    display: block;
+  }
+}
+
+header{
+  background-color: $color-blue-500;
+  color: $color-text-white;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+
+  &.front{
+    background-image: url("/static/images/background.png");
+
+    .header-text span:last-child{
+      font-size: 3rem;
+      line-height: 3rem;
+      display: block;
+      margin: 0 0 3rem;
+    }
+
+    .header-text span:first-child{
+      font-size: 6rem;
+      line-height: 6rem;
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .breadcrumb{
+    margin: 0 0 1.5rem 0;
+  }
+
+  .header-text{
+    padding: 6rem 3rem 3rem;
+    box-sizing: border-box;
+  }
+
+  .header-more{
+    padding: 0 3rem 3rem 0;
+    box-sizing: border-box;
+  }
+
+  h1{
+    margin: 0;
+  }
+
+  p.large{
+    margin: 0;
+    max-width: 720px;
+  }
+
+  a{
+    color: $color-text-white;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.textbox{
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: $color-background-1;
+
+  &.featured {
+    min-height: 10rem;
+    background-color: $color-blue-500;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    color: $color-text-white;
+
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+
+    a{
+      color: $color-text-white;
+    }
+  }
+}
+
+a.textbox{
+  text-decoration: none;
+  color: $color-text-black;
+  hyphens: auto;
+
+  h1, h2, h3, h4, h5{
+    margin: 0 0 1.5rem 0;
+  }
+
+  &:hover h4, &:hover h5{
+    text-decoration: underline;
+  }
+}
+
+.lead{
+  margin: 0 0 6rem 0;
+}
+
+.lead.image{
+  columns: 2;
+  column-gap: 3rem;
+  margin: 0 0 6rem 0;
+
+  img{
+    width: 100%;
+  }
+}
+
+.body{
+  //columns: 2;
+  column-gap: 3rem;
+}
+
+a.button{
+  margin: 0;
+  padding: .75rem;
+  overflow: hidden;
+  color: white;
+  text-decoration: none;
+  display: block;
+
+  &:hover{background-color: $color-blue-400;}
+
+  &.cyan{background-color: $color-cyan-500}
+}
+
+// Typography
+
+/*
+100 - Ultra Light
+200 - Light
+300 - Light
+400 - Regular
+500 - Medium
+600 - Bold
+700 - Bold
+800 - Heavy
+900 - Black
+*/
+
+
+h1{
+  font-size: 6rem;
+  line-height: 6rem;
+  margin: 0 0 6rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 0 0 3rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h3{
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  margin: 0 0 2.25rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 200;
+}
+
+h4{
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin: 0 0 2.25rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 200;
+}
+
+h5{
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 0 1.5rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 500;
+}
+
+h6, .heading-overline{
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 0 0 1.25rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+p{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 200;
+}
+
+p.large{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0 0 1.75rem 0;
+
+}
+
+b{
+  font-weight: 500;
+}
+
+ul{
+  margin: 0 0 1.5rem 0;
+  padding: 0 0 0 1rem;
+}
+
+li{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0 0 .75rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 200;
+}
+
+h2, h3, h4, h5, h6, p{
+  max-width: 720px;
+}
+
+.button{
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 0 0 1.25rem 0;
+
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// Responsivity
+
+@media screen and (max-width: 1024px){
+
+  body{
+    padding-top: 9.25rem;
+  }
+
+  // Mobile NAV
+  nav{
+    padding: 1.5rem;
+    position: fixed;
+    top: 1.5rem;
+    width: calc(100% - 3.25rem);
+    #menubutton{
+      display: inline-block;
+    }
+    #logo{
+      display: block;
+      img{
+        height: 1.5rem;
+      }
+    }
+    li{
+      float: none;
+      display: none;
+    }
+    .button{
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 1.5rem;
+    }
+  }
+
+  .lead.image{
+    columns: 1;
+    margin: 0 0 3rem 0;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+  body{
+    padding-top: 4.875rem;
+  }
+
+  nav{
+    padding: .25rem;
+    top: .125rem;
+    width: calc(100% - .5rem);
+
+    .button{
+      padding: 1.25rem;
+    }
+  }
+
+  .textbox{padding: 1.5rem;}
+
+  header {
+
+    .header-text{
+      padding: 3rem 1.5rem;
+    }
+
+    .header-more{
+      padding: 1.5rem;
+    }
+
+    span:first-child{
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    span:last-child{
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0 0 3rem 0;
+  }
+
+  h2{
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0 0 2rem 0;
+  }
+
+  h3{
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin: 0 0 2rem 0;
+  }
+
+  h4{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0 0 1.75rem 0;
+  }
+}
+
+@media screen and (max-width: 374px){
+
+  body{
+    padding-top: 3.875rem;
+  }
+
+  nav{
+    padding: .25rem;
+    width: calc(100% - .5rem);
+
+    .button{
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: .75rem;
+    }
+  }
+  .textbox{padding: 1rem;}
+
+  header {
+
+    .header-text{
+      padding: 2rem 1rem;
+    }
+
+    .header-more{
+      padding: 1rem;
+    }
+  }
+}

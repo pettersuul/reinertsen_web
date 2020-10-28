@@ -11,7 +11,7 @@
 
 {% include 'components/header.html' %}
 
-<article class="main textbox full">
+<article class="main textbox large">
   {% if page.lead and page.image %}
   <div class="lead image">
     <p class="large">{{ page.lead }}</p>
@@ -31,10 +31,18 @@
     {{ page.content|render|safe }}
   </div>
 </article>
-<aside class="links">
-  {% for item in page.subpages %}
-    {% include 'components/textbox-person.html' with content=item %}
+<aside class="links small">
+  {% for item in parent.featured %}
+    {% ifnotequal item.slug page.slug %}
+      {% include 'components/textbox-related.html' with content=item %}
+    {% endifnotequal %}
   {% endfor %}
+  {% for item in parent.subpages %}
+    {% ifnotequal item.slug page.slug %}
+      {% include 'components/textbox-related.html' with content=item %}
+    {% endifnotequal %}
+  {% endfor %}
+  <a class="textbox" href="/{{parent.slug}}"><h4><i class="material-icons">arrow_back&ensp;</i>{{parent.title}}</h4></a>
 </aside>
 
 {% endblock %}

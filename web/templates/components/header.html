@@ -1,13 +1,13 @@
-<header{% if front %} class="blue"{% endif %}>
+<header>
+  <div class="header-text">
 
-  <label id="menubutton" for="menucontroller">&#9776;</label>
-  <input type="checkbox" id="menucontroller"/>
+    <div class="breadcrumb heading-overline">
+      <a href="/">Reinertsen New Energy</a> /
+      {% if parent %}
+        <a href="/{{ parent.slug }}">{{ parent.title }}</a>
+      {% endif %}
+    </div>
 
-  <a id="logo" href="/">
-    <span>Reinertsen</span>
-    <span>New Energy</span>
-  </a>
-
-  {% include 'components/nav.html' %}
+    <h1>{{ page.title }}</h1>
 
 </header>

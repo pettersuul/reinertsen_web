@@ -5,30 +5,31 @@
   <head>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link href="{% static '/css/layout.css' %}" rel="stylesheet" />
+    <link href="{% static '/css/components.css' %}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
-    <link href="{% static '/css/fonts.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static '/css/typo.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static '/css/lightbox.min.css' %}" rel="stylesheet" />
 
     {% block title %}
     {% endblock %}
   </head>
 
-  {% if front %}
-  <body class="front">
-  {% else %}
   <body>
-  {% endif %}
-    {% include 'components/header.html' %}
+    {% include 'components/nav.html' %}
 
     {% block body %}
     {% endblock %}
 
-  <script src="{% static '/js/lightbox-jquery.min.js' %}"></script>
-
+    <script>
+    function menu() {
+      var x = document.getElementsByTagName('nav')[0].getElementsByTagName('li')[2];
+      console.log(x);
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
   </body>
 
 </html>

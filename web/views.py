@@ -36,6 +36,14 @@ def getpage(input, slug):
         })[0]
     return output
 
+def getsubpage(input, slug):
+    output = client.entries({
+        'content_type': 'subpage',
+        'fields.slug': slug,
+        'locale': checklocale(input)
+        })[0]
+    return output
+
 def getreference(input, slug):
     output = client.entries({
         'content_type': 'reference',
@@ -47,6 +55,14 @@ def getreference(input, slug):
 def getlisting(input, slug):
     output = client.entries({
         'content_type': 'listing',
+        'fields.slug': slug,
+        'locale': checklocale(input)
+        })[0]
+    return output
+
+def getperson(input, slug):
+    output = client.entries({
+        'content_type': 'person',
         'fields.slug': slug,
         'locale': checklocale(input)
         })[0]
@@ -65,6 +81,15 @@ def index(request):
     except IndexError:
         raise Http404()
 
+def contact(request):
+    try:
+        return render(request, 'contact.html', {
+            'page': getpage(request, request),
+            'nav': getnav(request)
+        })
+    except IndexError:
+        raise Http404()
+
 def page(request, slug):
     try:
         return render(request, 'page.html', {
@@ -74,46 +99,27 @@ def page(request, slug):
     except IndexError:
         raise Http404()
 
-def references_list(request):
+def subpage(request, slug, parent):
     try:
-        return render(request, 'reference_list.html', {
-            'page': getpage(request, 'references'),
+        return render(request, 'subpage.html', {
+            'page': getsubpage(request, slug),
+            'parent' : getpage(request, parent),
             'nav': getnav(request)
         })
-    except IndexError:
-        raise Http404()
-
-def references_single(request, slug):
+    except:
+        pass
     try:
-        return render(request, 'page.html', {
+        return render(request, 'subpage.html', {
             'page': getreference(request, slug),
+            'parent' : getpage(request, parent),
             'nav': getnav(request)
         })
-    except IndexError:
-        raise Http404()
-
-def listing_list(request):
+    except:
+        pass
     try:
-        return render(request, 'listing_list.html', {
-            'page': getpage(request, 'job-opportunities'),
-            'nav': getnav(request)
-        })
-    except IndexError:
-        raise Http404()
-
-def listing_single(request, slug):
-    try:
-        return render(request, 'page.html', {
+        return render(request, 'subpage.html', {
             'page': getlisting(request, slug),
-            'nav': getnav(request)
-        })
-    except IndexError:
-        raise Http404()
-
-def contact(request):
-    try:
-        return render(request, 'contact.html', {
-            'page': getpage(request, 'contact'),
+            'parent' : getpage(request, parent),
             'nav': getnav(request)
         })
     except IndexError:
