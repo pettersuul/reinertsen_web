@@ -27,12 +27,12 @@
 @font-face {
   font-family: 'DIN Next';
   font-weight: 200;
-  src: url('webFonts/DINNextLTPro-Light/font.woff2') format('woff2'),
-    url('webFonts/DINNextLTPro-Light/font.woff') format('woff');
+  src: url('/static/webfonts/DINNextLTPro-Light/font.woff2') format('woff2'),
+    url('/static/webfonts/DINNextLTPro-Light/font.woff') format('woff');
 }
 @font-face {
   font-family: 'DIN Next';
   font-weight: 500;
-  src: url('webFonts/DINNextLTPro-Medium/font.woff2') format('woff2'),
-    url('webFonts/DINNextLTPro-Medium/font.woff') format('woff');
+  src: url('/static/webfonts/DINNextLTPro-Medium/font.woff2') format('woff2'),
+    url('/static/webfonts/DINNextLTPro-Medium/font.woff') format('woff');
 }
