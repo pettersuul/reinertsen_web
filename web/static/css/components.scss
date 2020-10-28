@@ -370,14 +370,18 @@ h2, h3, h4, h5, h6, p{
       padding: 1.5rem;
     }
 
-    span:first-child{
-      font-size: 3rem;
-      line-height: 3rem;
-    }
+    &.front{
+      background-image: url("/static/images/background.png");
 
-    span:last-child{
-      font-size: 1.5rem;
-      line-height: 1.5rem;
+      .header-text span:last-child{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+
+      .header-text span:first-child{
+        font-size: 3rem;
+        line-height: 3rem;
+      }
     }
   }
 
