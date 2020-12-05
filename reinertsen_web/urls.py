@@ -19,8 +19,8 @@ from web import views
 
 urlpatterns = [
     path('', views.index),
-    path('kontakt', views.contact),
-    path('contact', views.contact),
+    path('kontakt', views.contact_no),
+    path('contact', views.contact_en),
     path('<parent>/<slug>', views.subpage),
     path('<slug>', views.page),
 ]

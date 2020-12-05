@@ -1,7 +1,31 @@
-{% if content.feature_image %}
-<a class="textbox featured" href="{{ page.slug }}/{{ content.slug }}" style="background-image: url({{ content.feature_image.url }})">
-{% else %}
-<a class="textbox" href="{{ page.slug }}/{{ content.slug }}">
-{% endif %}
+{% if content.source %}
+<div class="textbox" href="{{ content.slug }}">
   <h4>{{ content.title }}</h4>
-</a>
+  <p class="large">{{ content.lead }}</p>
+  <p><a href="{{ content.slug }}">Les mer…</a></p>
+</div>
+{% else %}
+
+  {% if content.title == 'Åpen søknad' %}
+  <div class="textbox">
+    <h4 class="centered">{{ content.title }}</h4>
+    <a class="button cyan centered" href="mailto:application@rein-energy.com">Send inn søknad</a>
+  </div>
+  {% elif content.title == 'Open application' %}
+  <div class="textbox">
+    <h4>{{ content.title }}</h4>
+    <a class="button cyan" href="mailto:application@rein-energy.com">Submit application</a>
+  </div>
+  {% else %}
+
+    {% if content.feature_image %}
+    <a class="textbox featured" href="{{ page.slug }}/{{ content.slug }}" style="background-image: url({{ content.feature_image.url }})">
+    {% else %}
+    <a class="textbox" href="{{ page.slug }}/{{ content.slug }}">
+    {% endif %}
+      <h4>{{ content.title }}</h4>
+    </a>
+
+  {% endif %}
+
+{% endif %}

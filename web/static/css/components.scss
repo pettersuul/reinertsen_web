@@ -152,17 +152,9 @@ a.textbox{
 }
 
 .lead{
-  margin: 0 0 6rem 0;
-}
-
-.lead.image{
-  columns: 2;
-  column-gap: 3rem;
-  margin: 0 0 6rem 0;
-
-  img{
-    width: 100%;
-  }
+  width: 50%;
+  margin: 0 0 3rem 3rem;
+  float: right;
 }
 
 .body{
@@ -181,6 +173,12 @@ a.button{
   &:hover{background-color: $color-blue-400;}
 
   &.cyan{background-color: $color-cyan-500}
+
+  &.inline{display: inline-block;}
+}
+
+.contentimage{
+  width: 100%;
 }
 
 // Typography
@@ -286,10 +284,18 @@ li{
 
   font-family: "DIN Next", sans-serif;
   font-weight: 200;
+
+  p{
+    margin: 0;
+  }
 }
 
 h2, h3, h4, h5, h6, p{
   max-width: 720px;
+}
+
+.centered{
+  text-align: center;
 }
 
 .button{
@@ -334,11 +340,6 @@ h2, h3, h4, h5, h6, p{
       line-height: 1.5rem;
       padding: 1.5rem;
     }
-  }
-
-  .lead.image{
-    columns: 1;
-    margin: 0 0 3rem 0;
   }
 }
 

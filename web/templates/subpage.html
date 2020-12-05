@@ -13,22 +13,21 @@
 
 <article class="main textbox large">
   {% if page.lead and page.image %}
-  <div class="lead image">
-    <p class="large">{{ page.lead }}</p>
-    <img src="{{ page.image.url }}">
-  </div>
+  <img class="lead" src="{{ page.image.url }}">
+  <p class="large">{{ page.lead }}</p>
   {% elif page.lead %}
-  <div class="lead">
-    <p class="large">{{ page.lead }}</p>
-  </div>
+  <p class="large">{{ page.lead }}</p>
   {% elif page.image %}
-  <div class="lead image">
-    <img src="{{ page.image.url }}">
-  </div>
+  <img class="lead" src="{{ page.image.url }}">
   {% elif page.lead %}
   {% endif %}
   <div class="body">
-    {{ page.content|render|safe }}
+  {% if page.content %}
+  {{ page.content|render|safe }}
+  {% endif %}
+  {% if page.content_image %}
+    <img class="contentimage" src="{{ page.content_image.url }}">
+  {% endif %}
   </div>
 </article>
 <aside class="links small">
