@@ -9,6 +9,8 @@ $color-text-black: #000;
 
 html{
   background-color: $color-background-0;
+  hyphens: auto;
+  word-break: break-word;
 }
 
 nav{
@@ -309,6 +311,15 @@ h2, h3, h4, h5, h6, p{
 }
 
 // Responsivity
+
+@media screen and (max-width: 1280px){
+
+  h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin: 0 0 2.5rem 0;
+  }
+}
 
 @media screen and (max-width: 1024px){
 
