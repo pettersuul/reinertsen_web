@@ -1,15 +1,15 @@
 {% if content.file and content.source %}
 <div class="textbox">
   <h6>{{content.source}}</h6>
-  <h5>{{content.title}}</h5>
+  <h4>{{content.title}}</h4>
   <p>{{content.lead}}</p>
-  <p><a href="{{ content.file.url }}">{% if lang == "no" %}Last ned…{% else %}Download…{% endif %}</a></p>
+  <p><a href="{{ content.file.url }}" target="_blank">{% if lang == "no" %}Last ned…{% else %}Download…{% endif %}</a></p>
 </div>
 {% elif content.source %}
 <div class="textbox">
   <h6>{{content.source}}</h6>
   <h4>{{ content.title }}</h4>
   <p>{{content.lead}}</p>
-  <p><a href="{{ content.slug }}">{% if lang == "no" %}Les mer…{% else %}Read more…{% endif %}</a></p>
+  <p><a href="{{ content.slug }}" target="_blank">{% if lang == "no" %}Les mer…{% else %}Read more…{% endif %}</a></p>
 </div>
 {% endif %}
