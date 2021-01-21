@@ -1,8 +1,16 @@
-{% if content.source %}
-<div class="textbox" href="{{ content.slug }}">
+{% if content.file and content.source %}
+<div class="textbox">
+  <h6>{{content.source}}</h6>
   <h4>{{ content.title }}</h4>
   <p class="large">{{ content.lead }}</p>
-  <p><a href="{{ content.slug }}">Les mer…</a></p>
+  <p><a href="{{ content.file.url }}">{% if lang == "no" %}Last ned…{% else %}Download…{% endif %}</a></p>
+</div>
+{% elif content.source %}
+<div class="textbox">
+  <h6>{{content.source}}</h6>
+  <h4>{{ content.title }}</h4>
+  <p class="large">{{ content.lead }}</p>
+  <p><a href="{{ content.slug }}">{% if lang == "no" %}Les mer…{% else %}Read more…{% endif %}</a></p>
 </div>
 {% else %}
 
@@ -18,13 +26,13 @@
   </div>
   {% else %}
 
-    {% if content.feature_image %}
-    <a class="textbox featured" href="{{ page.slug }}/{{ content.slug }}" style="background-image: url({{ content.feature_image.url }})">
-    {% else %}
-    <a class="textbox" href="{{ page.slug }}/{{ content.slug }}">
-    {% endif %}
-      <h4>{{ content.title }}</h4>
-    </a>
+  {% if content.feature_image %}
+  <a class="textbox featured" href="{{ page.slug }}/{{ content.slug }}" style="background-image: url({{ content.feature_image.url }})">
+  {% else %}
+  <a class="textbox" href="{{ page.slug }}/{{ content.slug }}">
+  {% endif %}
+    <h4>{{ content.title }}</h4>
+  </a>
 
   {% endif %}
 
