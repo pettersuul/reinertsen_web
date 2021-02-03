@@ -13,21 +13,23 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     {% if lang == "no" %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDY893MVDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDY893MVDM"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
         gtag('config', 'G-NDY893MVDM');
-    </script>
+      </script>
     {% else %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWMEK2S96S"></script>
-    <script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWMEK2S96S"></script>
+      <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-        gtag('config', 'G-JWMEK2S96S');
-    </script>
+
+      gtag('config', 'G-JWMEK2S96S');
+      </script>
     {% endif %}
 
     {% block title %}
@@ -35,6 +37,7 @@
   </head>
 
   <body>
+  {{ lang }}
     {% include 'components/nav.html' %}
     {% block body %}
     {% endblock %}
