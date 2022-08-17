@@ -54,6 +54,12 @@
 
   {% elif page.subpages %}
 
+    <aside class="links small">
+      {% for item in page.subpages %}
+        {% include 'components/textbox.html' with content=item %}
+      {% endfor %}
+    </aside>
+
     <article class="main textbox large">
       {% if page.lead %}
       <p class="large">{{ page.lead }}</p>
@@ -63,11 +69,6 @@
         <img class="contentimage" src="{{ page.content_image.url }}">
       {% endif %}
     </article>
-    <aside class="links small">
-      {% for item in page.subpages %}
-        {% include 'components/textbox.html' with content=item %}
-      {% endfor %}
-    </aside>
 
   {% else %}
 
